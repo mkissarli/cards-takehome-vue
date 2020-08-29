@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="row">
     <BlogCard v-for="post in posts" :key="post.slug" :blogPost="post"/>
   </div>
 </template>
@@ -43,10 +43,11 @@ export default {
 // Include all of Vanilla Framework
 @include vanilla;
 #app{
-  margin-top: 48px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-top: 1rem;
+  padding: 0 2rem;
   display: flex;
   flex-direction: row;
+  width: 1030px;
+  height: 420px;
 }
 </style>
