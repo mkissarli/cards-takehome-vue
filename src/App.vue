@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <!--{{posts}}-->
-    <BlogCard v-for="post in posts" :key="post.id" :blogPost="post"/>
+    <BlogCard v-for="post in posts" :key="post.slug" :blogPost="post"/>
   </div>
 </template>
 
@@ -45,7 +43,10 @@ export default {
 // Include all of Vanilla Framework
 @include vanilla;
 #app{
+  margin-top: 48px;
   margin-left: 20px;
   margin-right: 20px;
+  display: flex;
+  flex-direction: row;
 }
 </style>
