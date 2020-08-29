@@ -29,25 +29,20 @@ export default {
 </script>
 
 <style lang="scss">
-/*#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-*/
 // Import the framework
 @import 'node_modules/vanilla-framework/scss/vanilla';
 
 // Include all of Vanilla Framework
 @include vanilla;
 #app{
-  margin-top: 1rem;
-  padding: 0 2rem;
+  margin-top: 0.65rem;
+  margin-bottom: 0.65rem;
+  /*padding: 0 1.1rem;*/
   display: flex;
   flex-direction: row;
+
   width: 1030px;
   height: 420px;
+  background-color: #ffffff;
 }
 </style>
