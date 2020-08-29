@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <BlogCard v-for="post in posts" :key="post.id"/>
+    <!--{{posts}}-->
+    <BlogCard v-for="post in posts" :key="post.id" :blogPost="post"/>
   </div>
 </template>
 
@@ -23,7 +24,8 @@ export default {
   mounted () {
     axios
       .get('https://people.canonical.com/~anthonydillon/wp-json/wp/v2/posts.json')
-      .then(response => (this.posts = response))
+      .then(response => (this.posts = response.data));
+    console.log(this.posts);
   }
 }
 </script>

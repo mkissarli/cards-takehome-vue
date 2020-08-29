@@ -1,10 +1,10 @@
 <template>
   <div class="p-card--highlighted">
-    <h3>Tag</h3>
-    <img/>
-    <h2><a>This is the title</a></h2>
-    <p>By <a>author</a> on date</p>
-    <h3>tag</h3>
+    <h4>{{blogPost._embedded["wp:term"][2][0].name}}</h4>
+    <img :src="blogPost.featured_media"/>
+    <h3><a :href="blogPost.link">{{blogPost.title.rendered}}</a></h3>
+    <p>By <a :href="blogPost._embedded.author[0].link">{{ blogPost._embedded.author[0].name }}</a> on {{blogPost.date}}</p>
+    <h4>{{blogPost._embedded["wp:term"][0][0].name}}</h4>
   </div>
 </template>
 
