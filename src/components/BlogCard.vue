@@ -1,11 +1,12 @@
 <template>
   <div class="p-card--highlighted col-3">
 
+    <!-- Header containing the blog Category. If empty leave empty. -->
     <header class="topic-name">
       <h4 class="p-muted-heading">{{(blogPost["topic"][0] === undefined) ? "" : blogPost._embedded["wp:term"][2][0].name }}</h4>
     </header>
 
-
+    <!-- Main content of blog post card. Has an image, a title that is truncuated after two lines, and a date/author line. -->
     <div class="content">
       <div>
         <img :src="blogPost.featured_media"/>
@@ -24,11 +25,12 @@
       </span>
     </div>
 
-
+    <!-- Footer containing the type of post, for example article. -->
+    <footer>
       <p class="post-type">
         {{(blogPost["categories"] === undefined) ? "" : blogPost._embedded["wp:term"][0][0].name}}
       </p>
-
+    </footer>
 
   </div>
 </template>
