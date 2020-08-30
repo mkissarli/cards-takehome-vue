@@ -37,7 +37,6 @@ export default {
 #app{
   margin-top: 0.65rem;
   margin-bottom: 0.65rem;
-  /*padding: 0 1.1rem;*/
   display: flex;
   flex-direction: row;
 

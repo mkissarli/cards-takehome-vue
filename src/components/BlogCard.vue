@@ -92,7 +92,7 @@ div.content{
 div.content p.p-heading--4 {
   display: block;
   margin: 0.7rem 0 0.3rem;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   //height: 4em;
   width: 100%;
   line-height: 32px;
