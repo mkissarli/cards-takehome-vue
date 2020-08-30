@@ -10,13 +10,18 @@
       <div>
         <img :src="blogPost.featured_media"/>
       </div>
-      <h3><a class="line-clamp" :href="blogPost.link">
-        {{blogPost.title.rendered}}</a></h3>
-      <span><p class="author">
-        <em>
-           By <a :href="blogPost._embedded.author[0].link">{{ blogPost._embedded.author[0].name }}</a> on {{blogPost.date | formatDate}}
-        </em>
-      </p></span>
+      <p class="p-heading--4">
+        <a class="line-clamp" :href="blogPost.link">
+          {{blogPost.title.rendered}}
+        </a>
+      </p>
+      <span>
+        <p class="author">
+          <em>
+            By <a :href="blogPost._embedded.author[0].link">{{ blogPost._embedded.author[0].name }}</a> on {{blogPost.date | formatDate}}
+          </em>
+        </p>
+      </span>
     </div>
 
 
@@ -48,13 +53,16 @@ export default {
 
 <style scoped lang="scss">
 div.p-card--highlighted{
-  padding: 0;
-  border-top: 3px solid #a87ca0;
-  max-height: 100%;
   display: flex;
   flex-direction: column;
+
+  padding: 0;
+  
+  border-top: 3px solid #a87ca0;
+  max-height: 100%;
   overflow: hidden;
 }
+
 header{
   min-height: 11%;
 }
@@ -68,25 +76,25 @@ header.topic-name h4{
 }
 
 div.content{
-  border-top: 1px dotted #cdcdcd;
-  margin: 0 .5rem;
-  padding: 1rem .5rem .5rem;
-  flex-grow: 1;
-  line-height: 36px;
   display: flex;
   flex-direction: column;
-  //max-height:  70%;
-}
+  flex-grow: 1;
 
-div.content h3 {
+  border-top: 1px dotted #cdcdcd;
+  
+  margin: 0 .5rem;
+  padding: 1rem .5rem .5rem;
+  
+  line-height: 36px;
+}
+div.content p.p-heading--4 {
   display: block;
-  margin: 0.5rem 0;
-  font-size: 1.5rem;
-  height: 4rem;
+  margin: 0.7rem 0 0.3rem;
+  font-size: 1.4rem;
+  //height: 4em;
   width: 100%;
   line-height: 32px;
 }
-
 .line-clamp {
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -94,26 +102,26 @@ div.content h3 {
   overflow: hidden;
 }
 
-span{
-  display: flex;
-}
-
 p.author{
   margin: 0.1rem 0;
+  font-size: 0.9rem;
 }
 
-div img{
+img{
   display: block;
   width: 98%;
   margin-top: -0.25rem;
 }
 
 p.post-type{
+  margin: auto .6rem 0;
+  padding: 0.8rem .5rem 0.8rem;
+
   border-top: 1px dotted #cdcdcd;
-  font-size: .875rem;
-  margin: auto .5rem 0;
   max-width: inherit;
-  padding: 1rem .5rem;
+  //height: 14%;
+
+  font-size: .875rem;
 }
 
 a {
