@@ -41,6 +41,7 @@ export default {
   display: flex;
   flex-direction: row;
 
+  // The dimensions given for the brief.
   width: 1030px;
   height: 420px;
   background-color: #ffffff;
