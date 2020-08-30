@@ -5,7 +5,7 @@ A take home for Canonical copying a card system using the [Vanilla framework](ht
 
 The goal was to repliate:
 
-![Original Example Cards](./README_assets/candidate-test-blog-row.png)
+![Original Example Cards](./README_assets/candidate-test-blog-row-design.png)
 
 and the end result:
 
