@@ -3,7 +3,7 @@
 ## About
 A take home for Canonical copying a card system using the [Vanilla framework](https://vanillaframework.io/), and VueJS.
 
-The goal was to repliate:
+The goal was to replicate:
 
 ![Original Example Cards](./README_assets/candidate-test-blog-row-design.png)
 
